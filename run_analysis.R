@@ -43,19 +43,16 @@ mergeData <- function(){
     DataOnlyForMeanAndStd$Activity[DataOnlyForMeanAndStd$Activity == 4]<- "SITTING"
     DataOnlyForMeanAndStd$Activity[DataOnlyForMeanAndStd$Activity == 5]<- "STANDING"
     DataOnlyForMeanAndStd$Activity[DataOnlyForMeanAndStd$Activity == 6]<- "LAYING"
+    DataOnlyForMeanAndStd
 }
 
 # frist creating the merged data set and then getting an independent tidy data set with the average of each variable for each activity and each subject
 secondTidyDataSet <- function(){
-    mergeData()
-    #step 5 of the course project
-    fintalData <- DataOnlyForMeanAndStd
+    finalData <- mergeData()
     # group Data by Activity and Subject
-    groupedData <- group_by(fintalData, Activity, Subject)
+    groupedData <- group_by(finalData, Activity, Subject)
     # sumairse the grouped data
     data_to_submit <- summarise_each(groupedData, funs(mean))
     # save in a txt file
     write.table(data_to_submit,file = "tidyData.txt", row.name=FALSE)
 }
-
-
