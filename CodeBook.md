@@ -1,6 +1,6 @@
 ## CodeBook
     
-###Code book
+### Code book
 
     * Activity: string, out of  WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
     * Subject : Number betwen 1 and 30, labelling the 30 volunteers
