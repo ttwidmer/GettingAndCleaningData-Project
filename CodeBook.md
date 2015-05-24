@@ -11,5 +11,5 @@
    *The data is obtained from  https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
     precise description see the README.md 
     
-###Summary choices
-    *All the columns containing either "std" or "mean" are included in the tidyData.txt, since it was not specified that a specific mean such as meanFreq() should be excluded.
+### Summary choices
+    * All the columns containing either "std" or "mean" are included in the tidyData.txt, since it was not specified that a specific mean such as meanFreq() should be excluded.
